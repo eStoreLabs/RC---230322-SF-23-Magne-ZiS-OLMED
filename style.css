@@ -141,10 +141,10 @@ body {
   animation: es-pulse2 2s infinite;
 }
 #es-magne.es-magne .es-kv__icon--2 {
-  animation-delay: 0.666s;
+  animation-delay: 0.4s;
 }
 #es-magne.es-magne .es-kv__icon--3 {
-  animation-delay: 1.333s;
+  animation-delay: 0.8s;
 }
 #es-magne.es-magne .es-kv__img {
   margin: 0 auto;
@@ -243,7 +243,7 @@ body {
 }
 #es-magne.es-magne .es-features__title {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   color: #00bbb4;
   font-weight: 600;
   margin-bottom: 16px;
@@ -656,8 +656,9 @@ body {
   }
 }
 #es-magne.es-magne .es-cross {
-  padding: 16px;
+  padding: 40px 16px;
   background: url(img/bg-cross-mb.png) repeat center center;
+  background-size: cover;
   background-position: top;
   display: flex;
   align-items: center;

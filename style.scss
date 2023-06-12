@@ -179,10 +179,10 @@ body {
       box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
       animation: es-pulse2 2s infinite;
       &--2 {
-        animation-delay: 0.666s;
+        animation-delay: 0.4s;
       }
       &--3 {
-        animation-delay: 1.333s;
+        animation-delay: 0.8s;
       }
     }
     &__img {
@@ -282,7 +282,7 @@ body {
     }
     &__title {
       text-align: center;
-      font-size: 16px;
+      font-size: 18px;
       color: #00bbb4;
       font-weight: 600;
       margin-bottom: 16px;
@@ -695,10 +695,10 @@ body {
   }
 
   .es-cross {
-    padding: 16px;
+    padding: 40px 16px;
     //height: 103cqi;
     background: url(img/bg-cross-mb.png) repeat center center;
-    //background-size: cover;
+    background-size: cover;
     background-position: top;
     display: flex;
     align-items: center;
