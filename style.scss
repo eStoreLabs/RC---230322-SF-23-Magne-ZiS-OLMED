@@ -45,6 +45,44 @@ body {
   margin: 0 auto;
 }
 
+@-webkit-keyframes es-pulse2 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(180, 238, 234, 0.747);
+  }
+  70% {
+    transform: scale(1.05);
+    
+    box-shadow: 0 0 0 15px rgba(220, 241, 241, 0.253);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(71, 196, 190, 0.836);
+  }
+}
+
+@keyframes es-pulse2 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(180, 238, 234, 0.747);
+  }
+  70% {
+    transform: scale(1.05);
+    
+    box-shadow: 0 0 0 15px rgba(220, 241, 241, 0.253);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(71, 196, 190, 0.836);
+  }
+}
+
+@keyframes es-sweep-down {
+  0%    {opacity: 0; margin-top: -10px}
+  100%  {opacity: 1; margin-top: 0px}
+}
+
+
 #es-magne.es-magne {
   font-family: $regular;
   font-weight: 400;
@@ -87,6 +125,11 @@ body {
     line-height: 0;
     font-size: small;
   }
+   @container (min-width: 769px) {
+    sup, sub {
+      font-size: medium;
+    }
+   }
 
   .es-kv {
     padding: 20px 16px 16px 16px;
@@ -126,12 +169,12 @@ body {
       align-items: center;
       justify-content: center;
       box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
-      animation: pulse 6s infinite;
+      animation: es-pulse2 2s infinite;
       &--2 {
-        animation-delay: 2s;
+        animation-delay: 0.666s;
       }
       &--3 {
-        animation-delay: 4s;
+        animation-delay: 1.333s;
       }
     }
     &__img {
@@ -472,6 +515,7 @@ body {
     padding-top: calc(10cqi + 16px);
     background: url(img/bg-benefits.jpg) no-repeat center center;
     background-size: cover;
+    background-position: top;
     margin-bottom: -6cqi;
     padding-bottom: calc(6cqi + 16px);
     &__title {
@@ -517,12 +561,29 @@ body {
       border-radius: 25px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      max-width: 200px;
       gap: 8px;
       font-weight: 600;
+      cursor: pointer;
     }
     &__chevron {
       max-width: 10px;
     }
+    details .es-benefits__chevron {
+      transform: rotate(0deg);
+      transition: all ease-in 200ms;
+    }
+    details[open] .es-benefits__chevron {
+      transform: rotate(90deg);
+      transform-origin: center;
+      transition: all ease-in 200ms;
+    }
+    
+    details[open] .es-benefits__wrapper {
+      animation: es-sweep-down .2s ease-in-out;
+    }
+    
     &__wrapper {
       background: #fff;
       border: 2px solid #00bbb4;
@@ -663,7 +724,7 @@ body {
       border-radius: 16px;
       font-weight: 600;
       box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
-      animation: pulse-button 2s infinite;
+      animation: es-pulse2 2s infinite;
     }
     @container (min-width: 576px) {
       &__title {
