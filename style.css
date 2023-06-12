@@ -30,7 +30,7 @@ body {
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1;
+  line-height: normal;
   max-width: 800px;
   margin: 0 auto;
   padding: 0;
@@ -63,6 +63,7 @@ body {
 #es-magne.es-magne sup,
 #es-magne.es-magne sub {
   line-height: 0;
+  font-size: small;
 }
 #es-magne.es-magne .es-kv {
   padding: 20px 16px 16px 16px;
@@ -190,7 +191,10 @@ body {
   margin-bottom: 24px;
 }
 #es-magne.es-magne .es-features__item {
-  max-width: 175px;
+  max-width: 120px;
+  word-wrap: normal;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 #es-magne.es-magne .es-features__item img {
   margin-bottom: 8px;
@@ -198,6 +202,7 @@ body {
 #es-magne.es-magne .es-features__text {
   font-weight: 600;
   font-size: 16px;
+  line-height: normal;
 }
 #es-magne.es-magne .es-features__image {
   padding: 32px 0;
@@ -214,6 +219,10 @@ body {
   flex-flow: column;
   gap: 16px;
   justify-content: center;
+}
+#es-magne.es-magne .es-features__item-2 {
+  width: 85%;
+  margin: auto;
 }
 #es-magne.es-magne .es-features__item-2 img {
   margin: 0 auto;
@@ -232,9 +241,13 @@ body {
   #es-magne.es-magne .es-features__text {
     font-weight: 600;
     font-size: 20px;
+    line-height: normal;
   }
   #es-magne.es-magne .es-features__list {
     margin-bottom: 40px;
+  }
+  #es-magne.es-magne .es-features__item {
+    max-width: 175px;
   }
   #es-magne.es-magne .es-features__list-2 {
     flex-flow: row;
@@ -245,6 +258,11 @@ body {
   }
   #es-magne.es-magne .es-features__item-2 img {
     max-width: none;
+  }
+  #es-magne.es-magne .es-features__text-2 {
+    width: 259px;
+    margin: auto;
+    font-size: 20px;
   }
 }
 @container (min-width: 768px) {
@@ -369,6 +387,8 @@ body {
   font-weight: 600;
   text-align: center;
   color: #fff;
+  min-width: 300px;
+  width: 100%;
 }
 #es-magne.es-magne .es-hotspots__hotspot {
   position: absolute;
@@ -408,6 +428,7 @@ body {
   }
   #es-magne.es-magne .es-hotspots__text {
     font-size: 24px;
+    min-width: 500px;
   }
 }
 @container (min-width: 768px) {
@@ -420,6 +441,7 @@ body {
   }
   #es-magne.es-magne .es-hotspots__text {
     font-size: 35px;
+    min-width: 750px;
   }
 }
 #es-magne.es-magne .es-benefits {

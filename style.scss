@@ -49,7 +49,7 @@ body {
   font-family: $regular;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1;
+  line-height: normal;
   max-width: 800px;
   margin: 0 auto;
   padding: 0;
@@ -85,6 +85,7 @@ body {
   sup,
   sub {
     line-height: 0;
+    font-size: small;
   }
 
   .es-kv {
@@ -213,7 +214,9 @@ body {
       margin-bottom: 24px;
     }
     &__item {
-      max-width: 175px;
+      max-width: 120px;
+      word-wrap: normal;
+      hyphens: auto;
       img {
         margin-bottom: 8px;
       }
@@ -221,6 +224,7 @@ body {
     &__text {
       font-weight: 600;
       font-size: 16px;
+      line-height: normal;
     }
     &__image {
       padding: 32px 0;
@@ -239,6 +243,8 @@ body {
       justify-content: center;
     }
     &__item-2 {
+      width: 85%;
+      margin: auto;
       img {
         margin: 0 auto;
         margin-bottom: 8px;
@@ -257,9 +263,13 @@ body {
       &__text {
         font-weight: 600;
         font-size: 20px;
+        line-height: normal;
       }
       &__list {
         margin-bottom: 40px;
+      }
+      &__item {
+        max-width: 175px;
       }
       &__list-2 {
         flex-flow: row;
@@ -270,6 +280,11 @@ body {
         img {
           max-width: none;
         }
+      }
+      &__text-2 {
+        width: 259px;
+        margin: auto;
+        font-size: 20px;
       }
     }
     @container (min-width: 768px) {
@@ -392,6 +407,8 @@ body {
       font-weight: 600;
       text-align: center;
       color: #fff;
+      min-width: 300px;
+      width: 100%;
     }
     &__hotspot {
       position: absolute;
@@ -431,6 +448,7 @@ body {
       }
       &__text {
         font-size: 24px;
+        min-width: 500px;
       }
     }
     @container (min-width: 768px) {
@@ -443,6 +461,8 @@ body {
       }
       &__text {
         font-size: 35px;
+        min-width: 750px;
+       
       }
     }
   }
