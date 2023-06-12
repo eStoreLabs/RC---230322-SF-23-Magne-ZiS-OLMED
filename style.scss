@@ -820,17 +820,7 @@ body {
         font-size: 29px;
         min-width: auto;
       }
-      &__content {
-        //   &--desktop {
-        //     display: block;
-        //   }
-        //  &--mobile {
-        //     display: none;
-        //    }
-        }
-      summary {
-        //display: none;
-      }
+      
     }
   }
 
@@ -846,17 +836,21 @@ body {
     &__text {
       margin-bottom: 16px;
     }
-    &__item {
-      margin: 40px 0;
-    }
+    
     &__image {
       margin-bottom: 20px;
       margin-right: -16px;
       display: flex;
       justify-content: flex-end;
+      width: 280px;
     }
     &__item {
+      margin: 40px 0;
+      display: flex;
+        flex-flow: row-reverse;
+        align-items: center;
       &--reverse {
+        flex-flow: row;
         .es-magnez__image {
           justify-content: flex-start;
           margin-right: 0;
@@ -864,15 +858,16 @@ body {
         }
       }
     }
+    
     &__desc {
-      text-align: center;
+      //text-align: center;
       font-weight: 600;
       margin-bottom: 20px;
     }
     &__link {
       display: block;
       width: fit-content;
-      margin: 0 auto;
+      
       padding: 8px 16px;
       background: #962d38;
       color: #fff;
@@ -924,6 +919,7 @@ body {
         border-radius: 35px;
         padding: 16px 24px;
         min-width: 247px;
+        margin: 0 auto;
       }
     }
     @container (min-width: 768px) {

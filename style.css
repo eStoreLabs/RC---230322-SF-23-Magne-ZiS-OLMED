@@ -790,14 +790,21 @@ body {
 #es-magne.es-magne .es-magnez__text {
   margin-bottom: 16px;
 }
-#es-magne.es-magne .es-magnez__item {
-  margin: 40px 0;
-}
 #es-magne.es-magne .es-magnez__image {
   margin-bottom: 20px;
   margin-right: -16px;
   display: flex;
   justify-content: flex-end;
+  width: 280px;
+}
+#es-magne.es-magne .es-magnez__item {
+  margin: 40px 0;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+}
+#es-magne.es-magne .es-magnez__item--reverse {
+  flex-flow: row;
 }
 #es-magne.es-magne .es-magnez__item--reverse .es-magnez__image {
   justify-content: flex-start;
@@ -805,7 +812,6 @@ body {
   margin-left: -16px;
 }
 #es-magne.es-magne .es-magnez__desc {
-  text-align: center;
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -813,7 +819,6 @@ body {
   display: block;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
   padding: 8px 16px;
   background: #962d38;
   color: #fff;
@@ -867,6 +872,7 @@ body {
     border-radius: 35px;
     padding: 16px 24px;
     min-width: 247px;
+    margin: 0 auto;
   }
 }
 @container (min-width: 768px) {
