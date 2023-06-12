@@ -125,6 +125,14 @@ body {
     line-height: 0;
     font-size: small;
   }
+
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
    @container (min-width: 769px) {
     sup, sub {
       font-size: medium;
@@ -688,23 +696,22 @@ body {
 
   .es-cross {
     padding: 16px;
-    height: 103cqi;
-    background: url(img/bg-cross-mb.png) no-repeat center center;
-    background-size: cover;
+    //height: 103cqi;
+    background: url(img/bg-cross-mb.png) repeat center center;
+    //background-size: cover;
+    background-position: top;
     display: flex;
     align-items: center;
     justify-content: center;
+    
     &__title {
       font-size: 22px;
       font-weight: 600;
       text-align: center;
       text-transform: uppercase;
+      margin-bottom: 16px;
     }
-    &__content {
-      &--desktop {
-        display: none;
-      }
-    }
+     
     &__packshot {
       padding: 20px 0 32px 0;
     }
@@ -726,6 +733,40 @@ body {
       box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
       animation: es-pulse2 2s infinite;
     }
+    &__subtitle {
+      font-size: 24px;
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+    }
+    &__products {
+      display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 54px;
+    }
+    &__product {
+      max-width: 262px;
+        &--wide {
+          max-width: none;
+        }
+    }
+    &__packshot {
+      display: flex;
+        align-items: flex-end;
+        //min-height: 184px;
+        padding: 16px 0;
+    }
+    &__text {
+      font-weight: 600;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    
+    details[open] .es-hide {
+      display: none;
+    }
     @container (min-width: 576px) {
       &__title {
         font-size: 32px;
@@ -737,6 +778,7 @@ body {
         padding: 12px 32px;
         min-width: 247px;
       }
+      
     }
     @container (min-width: 768px) {
       height: 144cqi;
@@ -746,24 +788,12 @@ body {
       }
       &__subtitle {
         font-size: 35px;
-        color: #fff;
-        font-weight: 600;
-        text-align: center;
       }
       &__text {
         font-size: 29px;
-        font-weight: 600;
-        text-align: center;
-        margin-bottom: 16px;
+        
       }
-      &__content {
-        &--desktop {
-          display: block;
-        }
-        &--mobile {
-          display: none;
-        }
-      }
+      
       &__product {
         max-width: 262px;
         &--wide {
@@ -789,6 +819,17 @@ body {
       &__link {
         font-size: 29px;
         min-width: auto;
+      }
+      &__content {
+        //   &--desktop {
+        //     display: block;
+        //   }
+        //  &--mobile {
+        //     display: none;
+        //    }
+        }
+      summary {
+        //display: none;
       }
     }
   }

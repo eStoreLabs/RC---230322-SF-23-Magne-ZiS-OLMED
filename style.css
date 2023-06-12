@@ -88,6 +88,12 @@ body {
   line-height: 0;
   font-size: small;
 }
+#es-magne.es-magne details > summary {
+  list-style: none;
+}
+#es-magne.es-magne details > summary::-webkit-details-marker {
+  display: none;
+}
 @container (min-width: 769px) {
   #es-magne.es-magne sup, #es-magne.es-magne sub {
     font-size: medium;
@@ -651,9 +657,8 @@ body {
 }
 #es-magne.es-magne .es-cross {
   padding: 16px;
-  height: 103cqi;
-  background: url(img/bg-cross-mb.png) no-repeat center center;
-  background-size: cover;
+  background: url(img/bg-cross-mb.png) repeat center center;
+  background-position: top;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -663,9 +668,7 @@ body {
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-}
-#es-magne.es-magne .es-cross__content--desktop {
-  display: none;
+  margin-bottom: 16px;
 }
 #es-magne.es-magne .es-cross__packshot {
   padding: 20px 0 32px 0;
@@ -689,6 +692,38 @@ body {
   box-shadow: 0 0 0 0 rgb(255, 255, 255);
   animation: es-pulse2 2s infinite;
 }
+#es-magne.es-magne .es-cross__subtitle {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+#es-magne.es-magne .es-cross__products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 54px;
+}
+#es-magne.es-magne .es-cross__product {
+  max-width: 262px;
+}
+#es-magne.es-magne .es-cross__product--wide {
+  max-width: none;
+}
+#es-magne.es-magne .es-cross__packshot {
+  display: flex;
+  align-items: flex-end;
+  padding: 16px 0;
+}
+#es-magne.es-magne .es-cross__text {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+}
+#es-magne.es-magne .es-cross details[open] .es-hide {
+  display: none;
+}
 @container (min-width: 576px) {
   #es-magne.es-magne .es-cross__title {
     font-size: 32px;
@@ -711,21 +746,9 @@ body {
   }
   #es-magne.es-magne .es-cross__subtitle {
     font-size: 35px;
-    color: #fff;
-    font-weight: 600;
-    text-align: center;
   }
   #es-magne.es-magne .es-cross__text {
     font-size: 29px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 16px;
-  }
-  #es-magne.es-magne .es-cross__content--desktop {
-    display: block;
-  }
-  #es-magne.es-magne .es-cross__content--mobile {
-    display: none;
   }
   #es-magne.es-magne .es-cross__product {
     max-width: 262px;
