@@ -153,7 +153,7 @@ body {
   sup,
   sub {
     line-height: 0;
-    font-size: small;
+    font-size: 60%;
   }
 
   details > summary {
@@ -163,11 +163,11 @@ body {
     display: none;
   }
 
-   @container (min-width: 769px) {
-    sup, sub {
-      font-size: medium;
-    }
-   }
+  //  @container (min-width: 769px) {
+  //   sup, sub {
+  //     font-size: medium;
+  //   }
+  //  }
 
   .es-kv {
     padding: 20px 16px 16px 16px;
@@ -617,11 +617,11 @@ body {
       transition: all ease-in 200ms;
     }
     details[open] .es-benefits__chevron {
-      transform: rotate(90deg);
+      transform: rotate(180deg);
       transform-origin: center;
       transition: all ease-in 200ms;
     }
-    
+
     details[open] .es-benefits__wrapper {
       animation: es-sweep-down .2s ease-in-out;
     }
@@ -739,7 +739,7 @@ body {
     justify-content: center;
     
     &__title {
-      font-size: 22px;
+      font-size: 32px;
       font-weight: 600;
       text-align: center;
       text-transform: uppercase;
@@ -751,11 +751,12 @@ body {
     }
     &__img {
       margin: 0 auto;
-      max-width: 70%;
+      max-width: 100%;
     }
     &__link {
       display: block;
       width: fit-content;
+      font-size: 16px;
       margin: 0 auto;
       padding: 8px 16px;
       background: $primary;
@@ -764,8 +765,12 @@ body {
       text-align: center;
       border-radius: 16px;
       font-weight: 600;
+      width: 110px;
       box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
       animation: es-pulse2 2s infinite;
+      &--main {
+        width: 250px;
+      }
     }
     &__subtitle {
       font-size: 24px;
@@ -794,6 +799,7 @@ body {
     }
     &__text {
       font-weight: 600;
+      font-size: 20px;
         text-align: center;
         margin-bottom: 16px;
     }
@@ -806,11 +812,14 @@ body {
         font-size: 32px;
         margin-bottom: 32px;
       }
-      &__link {
+      &__subtitle {
         font-size: 20px;
+      }
+      &__link {
+        font-size: 16px;
         border-radius: 35px;
-        padding: 12px 32px;
-        min-width: 247px;
+        //padding: 12px 32px;
+        //min-width: 247px;
       }
       
     }
@@ -818,14 +827,19 @@ body {
       height: 144cqi;
       background: url(img/bg-cross.png) no-repeat center center;
       &__title {
-        font-size: 50px;
+        font-size: 40px;
       }
       &__subtitle {
-        font-size: 35px;
+        font-size: 24px;
       }
       &__text {
-        font-size: 29px;
-        
+        font-size: 20px;
+      }
+      &__link {
+        font-size: 20px;
+        padding: 12px 24px;
+        text-align: center;
+        width: 130px;
       }
       
       &__product {
@@ -850,10 +864,10 @@ body {
         gap: 16px;
         margin-bottom: 54px;
       }
-      &__link {
-        font-size: 29px;
-        min-width: auto;
-      }
+      // &__link {
+      //   font-size: 29px;
+      //   min-width: auto;
+      // }
       
     }
   }

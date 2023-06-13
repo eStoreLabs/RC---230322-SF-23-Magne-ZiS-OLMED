@@ -100,18 +100,13 @@ body {
 #es-magne.es-magne sup,
 #es-magne.es-magne sub {
   line-height: 0;
-  font-size: small;
+  font-size: 60%;
 }
 #es-magne.es-magne details > summary {
   list-style: none;
 }
 #es-magne.es-magne details > summary::-webkit-details-marker {
   display: none;
-}
-@container (min-width: 769px) {
-  #es-magne.es-magne sup, #es-magne.es-magne sub {
-    font-size: medium;
-  }
 }
 #es-magne.es-magne .es-kv {
   padding: 20px 16px 16px 16px;
@@ -561,7 +556,7 @@ body {
   transition: all ease-in 200ms;
 }
 #es-magne.es-magne .es-benefits details[open] .es-benefits__chevron {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
   transform-origin: center;
   transition: all ease-in 200ms;
 }
@@ -682,7 +677,7 @@ body {
   justify-content: center;
 }
 #es-magne.es-magne .es-cross__title {
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
@@ -693,12 +688,13 @@ body {
 }
 #es-magne.es-magne .es-cross__img {
   margin: 0 auto;
-  max-width: 70%;
+  max-width: 100%;
 }
 #es-magne.es-magne .es-cross__link {
   display: block;
   width: -moz-fit-content;
   width: fit-content;
+  font-size: 16px;
   margin: 0 auto;
   padding: 8px 16px;
   background: #001883;
@@ -707,8 +703,12 @@ body {
   text-align: center;
   border-radius: 16px;
   font-weight: 600;
+  width: 110px;
   box-shadow: 0 0 0 0 rgb(255, 255, 255);
   animation: es-pulse2 2s infinite;
+}
+#es-magne.es-magne .es-cross__link--main {
+  width: 250px;
 }
 #es-magne.es-magne .es-cross__subtitle {
   font-size: 24px;
@@ -736,6 +736,7 @@ body {
 }
 #es-magne.es-magne .es-cross__text {
   font-weight: 600;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 16px;
 }
@@ -747,11 +748,12 @@ body {
     font-size: 32px;
     margin-bottom: 32px;
   }
-  #es-magne.es-magne .es-cross__link {
+  #es-magne.es-magne .es-cross__subtitle {
     font-size: 20px;
+  }
+  #es-magne.es-magne .es-cross__link {
+    font-size: 16px;
     border-radius: 35px;
-    padding: 12px 32px;
-    min-width: 247px;
   }
 }
 @container (min-width: 768px) {
@@ -760,13 +762,19 @@ body {
     background: url(img/bg-cross.png) no-repeat center center;
   }
   #es-magne.es-magne .es-cross__title {
-    font-size: 50px;
+    font-size: 40px;
   }
   #es-magne.es-magne .es-cross__subtitle {
-    font-size: 35px;
+    font-size: 24px;
   }
   #es-magne.es-magne .es-cross__text {
-    font-size: 29px;
+    font-size: 20px;
+  }
+  #es-magne.es-magne .es-cross__link {
+    font-size: 20px;
+    padding: 12px 24px;
+    text-align: center;
+    width: 130px;
   }
   #es-magne.es-magne .es-cross__product {
     max-width: 262px;
@@ -789,10 +797,6 @@ body {
     justify-content: center;
     gap: 16px;
     margin-bottom: 54px;
-  }
-  #es-magne.es-magne .es-cross__link {
-    font-size: 29px;
-    min-width: auto;
   }
 }
 #es-magne.es-magne .es-magnez {
