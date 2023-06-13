@@ -1,4 +1,4 @@
-# SANOFI Magne ZiS Generyk, no. unknown
+# SANOFI Magne ZiS Generyk, 230322-SF-23
 <!-- please enter project number recived from PM -->
 
 ## LIVE SITE LINK 
@@ -15,7 +15,7 @@
 
 ### DESTINATION (name of e-retailer or general/pure)
 <!-- please enter e-retailers name -->
-Generic
+Generic, then Melissa
 
 ### E-RETAILER’S SPECIFICATION (technical guidelines; html, css, graphics, photos, resolution)
 <!-- please enter any additional comments important for the project -->
