@@ -53,6 +53,20 @@ body {
     box-shadow: 0 0 0 0 rgba(71, 196, 190, 0.836);
   }
 }
+@keyframes es-pulse3 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(150, 45, 56);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(150, 45, 56, 0);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(150, 45, 56, 0);
+  }
+}
 @keyframes es-sweep-down {
   0% {
     opacity: 0;
@@ -841,12 +855,17 @@ body {
   display: block;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 8px 16px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
   background: #962d38;
   color: #fff;
   text-decoration: none;
   text-align: center;
-  border-radius: 16px;
+  border-radius: 50px;
+  animation: es-pulse3 2s infinite;
+  width: 188px;
 }
 @container (min-width: 576px) {
   #es-magne.es-magne .es-magnez {
@@ -891,10 +910,7 @@ body {
   }
   #es-magne.es-magne .es-magnez__link {
     font-size: 20px;
-    border-radius: 35px;
-    padding: 16px 24px;
     min-width: 247px;
-    margin: 0 auto;
   }
 }
 @container (min-width: 768px) {
@@ -907,19 +923,14 @@ body {
   #es-magne.es-magne .es-magnez__desc {
     font-size: 35px;
   }
-  #es-magne.es-magne .es-magnez__link {
-    font-size: 23px;
-    border-radius: 35px;
-    padding: 16px 24px;
-    min-width: 247px;
-  }
 }
 #es-magne.es-magne .es-disclaimer {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   padding: 0 16px;
 }
 #es-magne.es-magne .es-disclaimer__text {
   margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 @container (min-width: 768px) {
   #es-magne.es-magne .es-disclaimer {

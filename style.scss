@@ -107,6 +107,36 @@ body {
   }
 }
 
+@-webkit-keyframes es-pulse3 {
+  0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgb(150, 45, 56);
+    }
+    70% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 15px rgb(150, 45, 56, 0);
+    }
+    to {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgb(150, 45, 56, 0);
+    }
+}
+
+@keyframes es-pulse3 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(150, 45, 56);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgb(150, 45, 56, 0);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgb(150, 45, 56, 0);
+  }
+}
+
 @keyframes es-sweep-down {
   0%    {opacity: 0; margin-top: -10px}
   100%  {opacity: 1; margin-top: 0px}
@@ -915,13 +945,17 @@ body {
     &__link {
       display: block;
       width: fit-content;
-      
-      padding: 8px 16px;
+      margin: 0 auto;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
       background: #962d38;
       color: #fff;
       text-decoration: none;
       text-align: center;
-      border-radius: 16px;
+      border-radius: 50px;
+      animation: es-pulse3 2s infinite;
+      width: 188px;
     }
     @container (min-width: 576px) {
       padding: 16px 60px;
@@ -962,13 +996,13 @@ body {
         font-size: 24px;
         margin-bottom: 32px;
       }
-      &__link {
+       &__link {
         font-size: 20px;
-        border-radius: 35px;
-        padding: 16px 24px;
-        min-width: 247px;
-        margin: 0 auto;
-      }
+      //   border-radius: 35px;
+      //   padding: 16px 24px;
+         min-width: 247px;
+      //   margin: 0 auto;
+     }
     }
     @container (min-width: 768px) {
       &__title {
@@ -980,20 +1014,21 @@ body {
       &__desc {
         font-size: 35px;
       }
-      &__link {
-        font-size: 23px;
-        border-radius: 35px;
-        padding: 16px 24px;
-        min-width: 247px;
-      }
+      // &__link {
+      //   font-size: 23px;
+      //   border-radius: 35px;
+      //   padding: 16px 24px;
+      //   min-width: 247px;
+      // }
     }
   }
 
   .es-disclaimer {
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     padding: 0 16px;
     &__text {
       margin-bottom: 16px;
+      margin-bottom: 32px;
     }
     @container (min-width: 768px) {
       padding: 0 60px;
