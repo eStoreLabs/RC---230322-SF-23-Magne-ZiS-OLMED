@@ -3,7 +3,7 @@
 
 ## LIVE SITE LINK 
 <!-- please enter link to site preview here -->
-[Live on Netlify](https://magne-zis.netlify.app/)
+[Live on Netlify](https://648abfaebedad4545f7e89ba--dazzling-pixie-2685ed.netlify.app/)
 
 ## PROJECT PREVIEW
 <!-- ![Design preview for the project](./link) -->
@@ -15,7 +15,7 @@
 
 ### DESTINATION (name of e-retailer or general/pure)
 <!-- please enter e-retailers name -->
-Generic, then Melissa
+Olmed
 
 ### E-RETAILER’S SPECIFICATION (technical guidelines; html, css, graphics, photos, resolution)
 <!-- please enter any additional comments important for the project -->
