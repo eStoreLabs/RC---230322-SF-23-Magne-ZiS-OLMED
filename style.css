@@ -788,11 +788,32 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 32px 16px;
+}
+#es-magne.es-magne .es-logo__label {
+  width: 50%;
+}
+#es-magne.es-magne .es-logo__image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#es-magne.es-magne .es-logo__image--big {
+  width: calc(50% - 16px);
+  justify-content: flex-end;
 }
 @container (min-width: 768px) {
   #es-magne.es-magne .es-logo {
     padding: 32px 60px;
     justify-content: space-between;
+  }
+  #es-magne.es-magne .es-logo__label {
+    width: auto;
+  }
+  #es-magne.es-magne .es-logo__image {
+    width: auto;
+  }
+  #es-magne.es-magne .es-logo__image--big {
+    width: auto;
   }
 }/*# sourceMappingURL=style.css.map */
