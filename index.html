@@ -4,9 +4,819 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magne ZiS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      @font-face {
+  font-family: "Gilroy";
+  src: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/fonts/Gilroy-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/fonts/Gilroy-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/fonts/Gilroy-Bold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@keyframes es-pulse {
+  0% {
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(180, 238, 234, 0.747);
+  }
+  50% {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(71, 196, 190, 0.836);
+  }
+  to {
+    border-radius: 50%;
+    box-shadow: 0 0 0 15px rgba(220, 241, 241, 0.253);
+  }
+}
+@keyframes es-pulse2 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(180, 238, 234, 0.747);
+  }
+  70% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 15px rgba(220, 241, 241, 0.253);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(71, 196, 190, 0.836);
+  }
+}
+@keyframes es-pulse3 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(150, 45, 56);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(150, 45, 56, 0);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(150, 45, 56, 0);
+  }
+}
+@keyframes es-sweep-down {
+  0% {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+#es-magne.es-magne {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  color: #001883;
+  background: #fff;
+  container-type: inline-size;
+}
+#es-magne.es-magne * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#es-magne.es-magne img,
+#es-magne.es-magne picture {
+  max-width: 100%;
+  display: block;
+}
+#es-magne.es-magne p,
+#es-magne.es-magne h2,
+#es-magne.es-magne h3,
+#es-magne.es-magne h4,
+#es-magne.es-magne h5,
+#es-magne.es-magne li {
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+#es-magne.es-magne sup,
+#es-magne.es-magne sub {
+  line-height: 0;
+  font-size: 60%;
+}
+#es-magne.es-magne details > summary {
+  list-style: none;
+}
+#es-magne.es-magne details > summary::-webkit-details-marker {
+  display: none;
+}
+#es-magne.es-magne .es-kv {
+  padding: 20px 16px 16px 16px;
+  background: url(https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/kv-dt.jpg) no-repeat center;
+  background-size: cover;
+  height: 112cqi;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+#es-magne.es-magne .es-kv__title {
+  font-size: 26px;
+  text-align: center;
+  font-weight: 800;
+}
+#es-magne.es-magne .es-kv__text {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+#es-magne.es-magne .es-kv__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#es-magne.es-magne .es-kv__item {
+  width: 208px;
+}
+#es-magne.es-magne .es-kv__icon {
+  margin: 0 auto;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  border: 2px solid #001883;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  animation: es-pulse2 2s infinite;
+}
+#es-magne.es-magne .es-kv__icon--2 {
+  animation-delay: 0.4s;
+}
+#es-magne.es-magne .es-kv__icon--3 {
+  animation-delay: 0.8s;
+}
+#es-magne.es-magne .es-kv__img {
+  margin: 0 auto;
+  max-width: 24px;
+}
+#es-magne.es-magne .es-kv__plus {
+  padding-bottom: 32px;
+  min-width: 14px;
+}
+#es-magne.es-magne .es-kv__plus img {
+  max-width: 14px;
+}
+@container (min-width: 425px) {
+  #es-magne.es-magne .es-kv__title {
+    font-size: 32px;
+  }
+  #es-magne.es-magne .es-kv__text {
+    font-size: 18px;
+  }
+  #es-magne.es-magne .es-kv__icon {
+    width: 48px;
+    height: 48px;
+  }
+  #es-magne.es-magne .es-kv__img {
+    max-width: 32px;
+  }
+  #es-magne.es-magne .es-kv__plus img {
+    max-width: 20px;
+  }
+}
+@container (min-width: 576px) {
+  #es-magne.es-magne .es-kv__title {
+    font-size: 48px;
+  }
+  #es-magne.es-magne .es-kv__text {
+    font-size: 20px;
+  }
+  #es-magne.es-magne .es-kv__icon {
+    width: 64px;
+    height: 64px;
+  }
+  #es-magne.es-magne .es-kv__img {
+    max-width: 48px;
+  }
+  #es-magne.es-magne .es-kv__plus {
+    padding-bottom: 40px;
+  }
+  #es-magne.es-magne .es-kv__plus img {
+    max-width: 27px;
+  }
+}
+@container (min-width: 768px) {
+  #es-magne.es-magne .es-kv {
+    padding: 42px 60px 32px 60px;
+  }
+  #es-magne.es-magne .es-kv__title {
+    font-size: 62px;
+  }
+  #es-magne.es-magne .es-kv__icon {
+    width: 82px;
+    height: 82px;
+  }
+  #es-magne.es-magne .es-kv__img {
+    max-width: none;
+  }
+}
+#es-magne.es-magne .es-features {
+  padding: 16px;
+  padding-bottom: 53px;
+  background: url(https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-features.jpg) no-repeat center left;
+  background-size: cover;
+}
+#es-magne.es-magne .es-features__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+#es-magne.es-magne .es-features__item {
+  max-width: 120px;
+  word-wrap: normal;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+#es-magne.es-magne .es-features__item img {
+  margin-bottom: 8px;
+}
+#es-magne.es-magne .es-features__text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: normal;
+}
+#es-magne.es-magne .es-features__image {
+  padding: 32px 0;
+}
+#es-magne.es-magne .es-features__icon {
+  animation: es-pulse 2s infinite;
+}
+#es-magne.es-magne .es-features__title {
+  text-align: center;
+  font-size: 18px;
+  color: #00bbb4;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+#es-magne.es-magne .es-features__list-2 {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  justify-content: center;
+}
+#es-magne.es-magne .es-features__item-2 {
+  width: 85%;
+  margin: auto;
+}
+#es-magne.es-magne .es-features__item-2 img {
+  margin: 0 auto;
+  margin-bottom: 8px;
+  max-width: 70px;
+}
+#es-magne.es-magne .es-features__text-2 {
+  text-align: center;
+  font-weight: 600;
+}
+@container (min-width: 576px) {
+  #es-magne.es-magne .es-features__title {
+    margin-bottom: 48px;
+    font-size: 24px;
+  }
+  #es-magne.es-magne .es-features__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: normal;
+  }
+  #es-magne.es-magne .es-features__list {
+    margin-bottom: 40px;
+  }
+  #es-magne.es-magne .es-features__item {
+    max-width: 175px;
+  }
+  #es-magne.es-magne .es-features__list-2 {
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+  #es-magne.es-magne .es-features__item-2 {
+    width: calc(50% - 8px);
+  }
+  #es-magne.es-magne .es-features__item-2 img {
+    max-width: none;
+  }
+  #es-magne.es-magne .es-features__text-2 {
+    width: 259px;
+    margin: auto;
+    font-size: 20px;
+  }
+}
+@container (min-width: 768px) {
+  #es-magne.es-magne .es-features {
+    background: url(https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-features.jpg) no-repeat center 0%;
+  }
+  #es-magne.es-magne .es-features__item {
+    width: calc(25% - 15px);
+  }
+  #es-magne.es-magne .es-features__title {
+    font-size: 35px;
+  }
+  #es-magne.es-magne .es-features__image {
+    position: relative;
+    right: -24px;
+    padding-top: 16px;
+  }
+}
+#es-magne.es-magne .es-info {
+  margin-top: -52px;
+  margin-bottom: 16px;
+}
+#es-magne.es-magne .es-info__content {
+  padding: 16px;
+  padding-bottom: 90px;
+  height: 66cqi;
+  min-height: 380px;
+  background: url(https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-info.png) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+#es-magne.es-magne .es-info__stress {
+  padding: 0 16px;
+}
+#es-magne.es-magne .es-info__text {
+  text-align: center;
+  margin-bottom: 16px;
+}
+#es-magne.es-magne .es-info__title {
+  text-align: center;
+  font-size: 16px;
+  color: #00bbb4;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+@container (min-width: 576px) {
+  #es-magne.es-magne .es-info__text {
+    font-size: 20px;
+  }
+  #es-magne.es-magne .es-info__title {
+    font-size: 24px;
+  }
+}
+@container (min-width: 768px) {
+  #es-magne.es-magne .es-info {
+    margin-bottom: 48px;
+  }
+  #es-magne.es-magne .es-info__content {
+    padding: 0px 60px;
+  }
+  #es-magne.es-magne .es-info__stress {
+    padding: 16px 60px;
+  }
+  #es-magne.es-magne .es-info__text {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+  #es-magne.es-magne .es-info__title {
+    font-size: 35px;
+    margin-bottom: 24px;
+  }
+}
+#es-magne.es-magne .es-hotspots {
+  position: relative;
+  z-index: 1;
+  margin-bottom: -7cqi;
+  padding: 16px;
+  min-height: 137cqi;
+  background: url(https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-hotspots.png) no-repeat center center;
+  background-size: cover;
+}
+#es-magne.es-magne .es-hotspots__content {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 8px 0;
+}
+#es-magne.es-magne .es-hotspots__content--bottom {
+  margin-top: 10cqi;
+}
+#es-magne.es-magne .es-hotspots__image {
+  margin-bottom: -16cqi;
+}
+#es-magne.es-magne .es-hotspots__hotspot {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+#es-magne.es-magne .es-hotspots__hotspot--top {
+  align-items: flex-end;
+}
+#es-magne.es-magne .es-hotspots__title {
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  margin: 24px 0;
+  text-transform: uppercase;
+}
+#es-magne.es-magne .es-hotspots__text {
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+@container (min-width: 576px) {
+  #es-magne.es-magne .es-hotspots__title {
+    font-size: 32px;
+  }
+  #es-magne.es-magne .es-hotspots__text {
+    font-size: 24px;
+  }
+}
+@container (min-width: 768px) {
+  #es-magne.es-magne .es-hotspots__content--bottom {
+    margin-top: 6cqi;
+    margin-bottom: 56px;
+  }
+  #es-magne.es-magne .es-hotspots__title {
+    margin: 56px 0;
+    font-size: 50px;
+  }
+  #es-magne.es-magne .es-hotspots__text {
+    font-size: 35px;
+  }
+}
+#es-magne.es-magne .es-benefits {
+  padding: 16px;
+  padding-top: calc(10cqi + 16px);
+  background: url(https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-benefits.jpg) no-repeat center center;
+  background-size: cover;
+  background-position: top;
+  margin-bottom: -6cqi;
+  padding-bottom: calc(6cqi + 16px);
+}
+#es-magne.es-magne .es-benefits__title {
+  text-align: center;
+  font-size: 16px;
+  color: #00bbb4;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+#es-magne.es-magne .es-benefits__bar {
+  font-weight: 600;
+  max-width: 218px;
+  margin: 0 auto;
+  background: #fff;
+  height: 45px;
+  border: 2px solid #001883;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#es-magne.es-magne .es-benefits__bar:not(:last-child) {
+  margin-bottom: 16px;
+}
+#es-magne.es-magne .es-benefits__icon {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #001883;
+  border-radius: 48px;
+}
+#es-magne.es-magne .es-benefits__img {
+  max-width: 50%;
+}
+#es-magne.es-magne .es-benefits__button {
+  margin: 24px auto;
+  background: #001883;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 200px;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#es-magne.es-magne .es-benefits__chevron {
+  max-width: 10px;
+}
+#es-magne.es-magne .es-benefits details .es-benefits__chevron {
+  transform: rotate(0deg);
+  transition: all ease-in 200ms;
+}
+#es-magne.es-magne .es-benefits details[open] .es-benefits__chevron {
+  transform: rotate(180deg);
+  transform-origin: center;
+  transition: all ease-in 200ms;
+}
+#es-magne.es-magne .es-benefits details[open] .es-benefits__wrapper {
+  animation: es-sweep-down 0.2s ease-in-out;
+}
+#es-magne.es-magne .es-benefits__wrapper {
+  background: #fff;
+  border: 2px solid #00bbb4;
+  border-radius: 16px;
+  padding: 8px;
+}
+#es-magne.es-magne .es-benefits__table {
+  border-collapse: collapse;
+  font-weight: 600;
+  font-size: 13px;
+}
+#es-magne.es-magne .es-benefits__table th,
+#es-magne.es-magne .es-benefits__table td {
+  padding: 8px 0;
+}
+#es-magne.es-magne .es-benefits__table th:not(:last-child),
+#es-magne.es-magne .es-benefits__table td:not(:last-child) {
+  padding-right: 8px;
+}
+#es-magne.es-magne .es-benefits__row {
+  border-bottom: 2px solid #00bbb4;
+}
+#es-magne.es-magne .es-benefits__row--borderless {
+  border: none;
+}
+#es-magne.es-magne .es-benefits__name {
+  text-align: left;
+  color: #00bbb4;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#es-magne.es-magne .es-benefits__disc {
+  font-weight: 600;
+  color: #00bbb4;
+}
+@container (min-width: 576px) {
+  #es-magne.es-magne .es-benefits {
+    padding: 16px 60px;
+    padding-top: calc(10cqi + 16px);
+    margin-bottom: -6cqi;
+    padding-bottom: calc(6cqi + 32px);
+  }
+  #es-magne.es-magne .es-benefits__title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  #es-magne.es-magne .es-benefits__bar {
+    font-size: 29px;
+    max-width: 500px;
+    height: 100px;
+    border-radius: 48px;
+    gap: 16px;
+  }
+  #es-magne.es-magne .es-benefits__icon {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #001883;
+    border-radius: 48px;
+  }
+  #es-magne.es-magne .es-benefits__img {
+    max-width: none;
+  }
+  #es-magne.es-magne .es-benefits__table {
+    font-size: 20px;
+  }
+  #es-magne.es-magne .es-benefits__button {
+    font-size: 20px;
+    border-radius: 35px;
+    padding: 16px 24px;
+    min-width: 247px;
+    gap: 32px;
+    margin: 42px auto 24px auto;
+  }
+  #es-magne.es-magne .es-benefits__chevron {
+    max-width: 18px;
+  }
+}
+@container (min-width: 768px) {
+  #es-magne.es-magne .es-benefits {
+    margin-bottom: -12cqi;
+    padding-bottom: calc(6cqi + 56px);
+  }
+  #es-magne.es-magne .es-benefits__title {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+  #es-magne.es-magne .es-benefits__bar {
+    max-width: 490px;
+    height: 100px;
+  }
+  #es-magne.es-magne .es-benefits__bar:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  #es-magne.es-magne .es-benefits__icon {
+    height: 100px;
+    width: 100px;
+  }
+  #es-magne.es-magne .es-benefits__table {
+    font-size: 23px;
+  }
+}
+#es-magne.es-magne .es-cross {
+  padding: 40px 16px;
+  background: url(https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-cross-mb.png) repeat center center;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#es-magne.es-magne .es-cross__title {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+#es-magne.es-magne .es-cross__packshot {
+  padding: 20px 0 32px 0;
+}
+#es-magne.es-magne .es-cross__img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+#es-magne.es-magne .es-cross__link {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  background: #001883;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 16px;
+  font-weight: 600;
+  width: 110px;
+  box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  animation: es-pulse2 2s infinite;
+}
+#es-magne.es-magne .es-cross__link--main {
+  width: 250px;
+}
+#es-magne.es-magne .es-cross__subtitle {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+#es-magne.es-magne .es-cross__products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 54px;
+}
+#es-magne.es-magne .es-cross__product {
+  max-width: 262px;
+}
+#es-magne.es-magne .es-cross__product--wide {
+  max-width: none;
+}
+#es-magne.es-magne .es-cross__packshot {
+  min-height: 184px;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px 0;
+}
+#es-magne.es-magne .es-cross__text {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+#es-magne.es-magne .es-cross details[open] .es-hide {
+  display: none;
+}
+@container (min-width: 576px) {
+  #es-magne.es-magne .es-cross__title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+  #es-magne.es-magne .es-cross__subtitle {
+    font-size: 20px;
+  }
+  #es-magne.es-magne .es-cross__link {
+    font-size: 16px;
+    border-radius: 35px;
+  }
+}
+@container (min-width: 768px) {
+  #es-magne.es-magne .es-cross {
+    height: 133cqi;
+    background: url(https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-cross.png) no-repeat center bottom;
+  }
+  #es-magne.es-magne .es-cross__title {
+    font-size: 40px;
+  }
+  #es-magne.es-magne .es-cross__subtitle {
+    font-size: 24px;
+  }
+  #es-magne.es-magne .es-cross__text {
+    font-size: 20px;
+  }
+  #es-magne.es-magne .es-cross__link {
+    font-size: 20px;
+    padding: 12px 24px;
+    text-align: center;
+    width: 130px;
+  }
+  #es-magne.es-magne .es-cross__product {
+    flex: 1;
+    max-width: calc(33% - 8px);
+  }
+  #es-magne.es-magne .es-cross__product--wide {
+    max-width: none;
+  }
+}
+#es-magne.es-magne .es-disclaimer {
+  margin: 32px 0;
+  padding: 0 16px;
+}
+#es-magne.es-magne .es-disclaimer__text {
+  margin-bottom: 16px;
+  margin-bottom: 32px;
+}
+@container (min-width: 768px) {
+  #es-magne.es-magne .es-disclaimer {
+    margin-top: 56px;
+    padding: 0 60px;
+    justify-content: space-between;
+  }
+}
+#es-magne.es-magne .es-ref {
+  padding: 0 16px;
+}
+#es-magne.es-magne .es-ref span {
+  word-break: break-all;
+}
+@container (min-width: 768px) {
+  #es-magne.es-magne .es-ref {
+    padding: 0 60px;
+    justify-content: space-between;
+  }
+}
+#es-magne.es-magne .es-logo {
+  padding: 32px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 32px 16px;
+}
+#es-magne.es-magne .es-logo__label {
+  width: 50%;
+}
+#es-magne.es-magne .es-logo__image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#es-magne.es-magne .es-logo__image--big {
+  width: calc(50% - 16px);
+  justify-content: flex-end;
+}
+@container (min-width: 768px) {
+  #es-magne.es-magne .es-logo {
+    padding: 32px 60px;
+    justify-content: space-between;
+  }
+  #es-magne.es-magne .es-logo__label {
+    width: auto;
+  }
+  #es-magne.es-magne .es-logo__image {
+    width: auto;
+  }
+  #es-magne.es-magne .es-logo__image--big {
+    width: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
+    </style>
   </head>
 
   <body>
@@ -19,25 +829,25 @@
         <div class="es-kv__items">
           <div class="es-kv__item">
             <div class="es-kv__icon es-kv__icon--1">
-              <img src="img/icon-1.png" alt="" class="es-kv__img" />
+              <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/icon-1.png" alt="" class="es-kv__img" />
             </div>
             <div class="es-kv__text">ASHWAGANDHA</div>
           </div>
           <div class="es-kv__plus">
-            <img src="img/plus.png" alt="" class="es-kv__img" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/plus.png" alt="" class="es-kv__img" />
           </div>
           <div class="es-kv__item">
             <div class="es-kv__icon es-kv__icon--2">
-              <img src="img/icon-2.png" alt="" class="es-kv__img" />
+              <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/icon-2.png" alt="" class="es-kv__img" />
             </div>
             <div class="es-kv__text">MAGNEZ</div>
           </div>
           <div class="es-kv__plus">
-            <img src="img/plus.png" alt="" class="es-kv__img" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/plus.png" alt="" class="es-kv__img" />
           </div>
           <div class="es-kv__item">
             <div class="es-kv__icon es-kv__icon--3">
-              <img src="img/icon-3.png" alt="" class="es-kv__img" />
+              <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/icon-3.png" alt="" class="es-kv__img" />
             </div>
             <div class="es-kv__text">Witamina&nbsp;b<sub>6</sub></div>
           </div>
@@ -47,14 +857,14 @@
       <div class="es-features">
         <div class="es-features__list">
           <div class="es-features__item">
-            <img src="img/feature-1.png" alt="Ashwagandha na co pomaga? Ashwagandha pomaga zachować optymalną wytrzymałość, poczucie energii i witalności." class="es-features__img" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/feature-1.png" alt="Ashwagandha na co pomaga? Ashwagandha pomaga zachować optymalną wytrzymałość, poczucie energii i witalności." class="es-features__img" />
             <p class="es-features__text">
               Ashwagandha długofalowo przyczynia się do odporności organizmu na
               stres.
             </p>
           </div>
           <div class="es-features__item">
-            <img src="img/feature-2.png" alt="Suplement diety Magne B6 Zmęczenie i Stres, 30 tabletek powlekanych, zawiera magnez w postaci cytrynianu magnezu." class="es-features__img" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/feature-2.png" alt="Suplement diety Magne B6 Zmęczenie i Stres, 30 tabletek powlekanych, zawiera magnez w postaci cytrynianu magnezu." class="es-features__img" />
             <p class="es-features__text">
               Wysoce przyswajalny magnez w postaci cytrynianu magnezu.<sup
                 >1</sup
@@ -62,38 +872,38 @@
             </p>
           </div>
           <div class="es-features__item">
-            <img src="img/feature-3.png" alt="Magnez i witamina B6 przyczyniają się do zmniejszenia uczucia zmęczenia i znużenia, dla osób narażonych na stres w pracy." class="es-features__img" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/feature-3.png" alt="Magnez i witamina B6 przyczyniają się do zmniejszenia uczucia zmęczenia i znużenia, dla osób narażonych na stres w pracy." class="es-features__img" />
             <p class="es-features__text">
               Witamina B<sub>6</sub> pomaga w utrzymaniu prawidłowych funkcji
               psycho&shy;logicznych.<sup>2</sup>
             </p>
           </div>
           <div class="es-features__item">
-            <img src="img/feature-4.png" alt="Dzienna zalecana dawka magnezu, Magne B6 Zmęczenie i Stres 30 tabletek - do kupienia online w aptece internetowej." class="es-features__img" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/feature-4.png" alt="Dzienna zalecana dawka magnezu, Magne B6 Zmęczenie i Stres 30 tabletek - do kupienia online w aptece internetowej." class="es-features__img" />
             <p class="es-features__text">
               Wygodne dawkowanie: <br />1 tabletka dziennie.
             </p>
           </div>
         </div>
         <div class="es-features__image">
-          <img src="img/feature.png" alt="Objawy stresu: uczucie zmęczenia po przebudzeniu, rozdrażnienie, irytacja, zły humor, trudności z koncentracją i pamięcią." class="es-features__img" />
+          <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/feature.png" alt="Objawy stresu: uczucie zmęczenia po przebudzeniu, rozdrażnienie, irytacja, zły humor, trudności z koncentracją i pamięcią." class="es-features__img" />
         </div>
         <p class="es-features__title">
           Dla kogo jest <br />Magne-B<sub>6</sub> ZMĘCZENIE I STRES?
         </p>
         <div class="es-features__list-2">
           <div class="es-features__item-2">
-            <img src="img/feature-5.png" alt="" class="es-features__img es-features__icon" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/feature-5.png" alt="" class="es-features__img es-features__icon" />
             <p class="es-features__text-2">Osób narażonych na stres w pracy.</p>
           </div>
           <div class="es-features__item-2">
-            <img src="img/feature-6.png" alt="" class="es-features__img es-features__icon" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/feature-6.png" alt="" class="es-features__img es-features__icon" />
             <p class="es-features__text-2">
               Osób, które chcą wzmocnić odporność na stres.
             </p>
           </div>
           <div class="es-features__item-2">
-            <img src="img/feature-7.png" alt="" class="es-features__img es-features__icon" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/feature-7.png" alt="" class="es-features__img es-features__icon" />
             <p class="es-features__text-2">
               Rodziców, którzy potrzebują wsparcia w codziennych zadaniach.
             </p>
@@ -158,7 +968,7 @@
           </div>
         </div>
         <div class="es-hotspots__image">
-          <img src="img/hotspots.png" alt="" class="es-hotspots__img" />
+          <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/hotspots.png" alt="" class="es-hotspots__img" />
         </div>
         <div class="es-hotspots__content">
           <div class="es-hotspots__hotspot">
@@ -187,26 +997,26 @@
         </p>
         <div class="es-benefits__bar">
           <div class="es-benefits__icon">
-            <img src="img/benefit-1.png" alt="Jak długo stosować suplement diety Magne B6 Zmęczenie i Stres, 30 tabletek powlekanych." class="es-benefits__img" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/benefit-1.png" alt="Jak długo stosować suplement diety Magne B6 Zmęczenie i Stres, 30 tabletek powlekanych." class="es-benefits__img" />
           </div>
           <p class="es-benefits__label">Miesiąc stosowania</p>
         </div>
         <div class="es-benefits__bar">
           <div class="es-benefits__icon">
-            <img src="img/benefit-2.png" alt="Dzienna dawka Magne B6 Zmęczenie i Stres, suplementu diety na poprawę samopoczucia." class="es-benefits__img" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/benefit-2.png" alt="Dzienna dawka Magne B6 Zmęczenie i Stres, suplementu diety na poprawę samopoczucia." class="es-benefits__img" />
           </div>
           <p class="es-benefits__label">1 tabletka dziennie</p>
         </div>
         <div class="es-benefits__bar">
           <div class="es-benefits__icon">
-            <img src="img/benefit-3.png" alt="Suplement diety Magne B6 Zmęczenie i Stres, zawiera adaptogen, ashwagandhę, roślinę, która wspiera balans emocjonalny." class="es-benefits__img" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/benefit-3.png" alt="Suplement diety Magne B6 Zmęczenie i Stres, zawiera adaptogen, ashwagandhę, roślinę, która wspiera balans emocjonalny." class="es-benefits__img" />
           </div>
           <p class="es-benefits__label">Gwarancja jakości<sup>8</sup></p>
         </div>
         <details>
           <summary class="es-benefits__button">
             Sprawdź skład
-            <img src="img/chevron.png" alt="" class="es-benefits__chevron" />
+            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/chevron.png" alt="" class="es-benefits__chevron" />
           </summary>
           <div class="es-benefits__wrapper">
             <table class="es-benefits__table">
@@ -260,7 +1070,7 @@
               <div class="es-cross__products">
                 <div class="es-cross__product">
                   <div class="es-cross__packshot">
-                    <img src="img/packshot-1.png" alt="Lek z magnezem bez recepty Magne B6 Forte 100 tabletek powlekanych. Do kupienia online w aptece internetowej." class="es-cross__img" />
+                    <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/packshot-1.png" alt="Lek z magnezem bez recepty Magne B6 Forte 100 tabletek powlekanych. Do kupienia online w aptece internetowej." class="es-cross__img" />
                   </div>
                   <p class="es-cross__text">
                     Magne B<sub>6</sub> FORTE <br />100 tabl.
@@ -269,7 +1079,7 @@
                 </div>
                 <div class="es-cross__product">
                   <div class="es-cross__packshot">
-                    <img src="img/packshot-2.png" alt="Magnez lek bez recepty, na niedobór magnezu. Magne B6 Forte 60 tabletek powlekanych, lek dostępny w aptece online." class="es-cross__img" />
+                    <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/packshot-2.png" alt="Magnez lek bez recepty, na niedobór magnezu. Magne B6 Forte 60 tabletek powlekanych, lek dostępny w aptece online." class="es-cross__img" />
                   </div>
                   <p class="es-cross__text">
                     Magne B<sub>6</sub> FORTE <br />60 tabl.
@@ -278,7 +1088,7 @@
                 </div>
                 <div class="es-cross__product">
                   <div class="es-cross__packshot">
-                    <img src="img/packshot-3.png" alt="Lek Magne B6 60 tabletek do kupienia w aptece Melissa na niedobór magnezu - objawy: kołatanie serca, skurcze mięśni." class="es-cross__img" />
+                    <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/packshot-3.png" alt="Lek Magne B6 60 tabletek do kupienia w aptece Melissa na niedobór magnezu - objawy: kołatanie serca, skurcze mięśni." class="es-cross__img" />
                   </div>
                   <p class="es-cross__text">
                     Magne B<sub>6</sub> <br />60 tabl.
@@ -290,7 +1100,7 @@
               <div class="es-cross__products">
                 <div class="es-cross__product es-cross__product--wide">
                   <div class="es-cross__packshot">
-                    <img src="img/packshot-4.png" alt="Suplement diety Magne B6 Zmęczenie i Stres na radzenie sobie ze stresem, do kupienia online w aptece internetowej." class="es-cross__img" />
+                    <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/packshot-4.png" alt="Suplement diety Magne B6 Zmęczenie i Stres na radzenie sobie ze stresem, do kupienia online w aptece internetowej." class="es-cross__img" />
                   </div>
                   <p class="es-cross__text">
                     Magne-B<sub>6</sub> ZMĘCZENIE I STRES <br />30 tabl.
@@ -396,10 +1206,10 @@
       <div class="es-logo">
         <p class="es-logo__label">MAT-PL-2200517-2.0-06.2023</p>
         <div class="es-logo__image es-logo__image--big">
-          <img src="img/sanofi.png" alt="" class="es-logo__img" />
+          <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/sanofi.png" alt="" class="es-logo__img" />
         </div>
         <div class="es-logo__image">
-          <img src="img/suplement.png" alt="" class="es-logo__img" />
+          <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/suplement.png" alt="" class="es-logo__img" />
         </div>
       </div>
     </div>

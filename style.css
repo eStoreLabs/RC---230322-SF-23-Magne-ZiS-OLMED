@@ -16,15 +16,7 @@
   font-weight: 800;
   font-style: normal;
 }
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
 
-* {
-  box-sizing: border-box;
-}
 @keyframes es-pulse {
   0% {
     border-radius: 50%;
