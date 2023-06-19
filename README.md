@@ -3,7 +3,7 @@
 
 ## LIVE SITE LINK 
 <!-- please enter link to site preview here -->
-[Live on Netlify](https://648abfaebedad4545f7e89ba--dazzling-pixie-2685ed.netlify.app/)
+[Live on Netlify](https://magne-zis-olmed.netlify.app/)
 
 ## PROJECT PREVIEW
 <!-- ![Design preview for the project](./link) -->
