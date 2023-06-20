@@ -834,6 +834,53 @@
           width: auto;
         }
       } /*# sourceMappingURL=style.css.map */
+      #es-magne.es-magne #es-benefits-expand-toggle {
+    display: none;
+        }
+  #es-magne.es-magne
+    #es-benefits-expand-toggle:checked
+    ~ #es-benefits__wrapper {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+  }
+
+  #es-magne.es-magne
+    #es-benefits-expand-toggle:checked
+    ~ #es-benefits-expand-btn {
+    display: none;
+  }
+
+  #es-magne.es-magne .es-benefits__wrapper {
+    visibility: collapse;
+    height: 0px;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+
+  #es-magne.es-magne #es-cross-expand-toggle {
+    display: none;
+        }
+  #es-magne.es-magne
+    #es-cross-expand-toggle:checked
+    ~ #es-cross-mobile {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+  }
+
+  #es-magne.es-magne
+    #es-cross-expand-toggle:checked
+    ~ #es-cross-trigger {
+    display: none;
+  }
+
+  #es-magne.es-magne .es-cross__content--mobile {
+    visibility: collapse;
+    height: 0px;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
     </style>
   </head>
 
@@ -1019,12 +1066,12 @@
           </div>
           <p class="es-benefits__label">Gwarancja jakości<sup>8</sup></p>
         </div>
-        <details>
-          <summary class="es-benefits__button">
-            Sprawdź skład
-            <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/chevron.png" alt="" class="es-benefits__chevron" />
-          </summary>
-          <div class="es-benefits__wrapper">
+          <input type="checkbox" id="es-benefits-expand-toggle" />
+          <label class="es-benefits__button" for="es-benefits-expand-toggle">
+              Sprawdź skład
+              <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-DROGERIA-OLMED/master/img/chevron.png" alt="" class="es-benefits__chevron" />
+          </label>
+          <div id="es-benefits__wrapper" class="es-benefits__wrapper">
             <table class="es-benefits__table">
               <thead>
                 <tr class="es-benefits__row">
@@ -1064,22 +1111,22 @@
               <sup>*</sup>Referencyjna wartość spożycia dla osób dorosłych
             </p>
           </div>
-        </details>
       </div>
 
       <div class="es-cross">
         <div class="es-cross__wrapper">
           <p class="es-cross__title">RODZINA Magne B<sub>6</sub><sup>®</sup></p>
-          <details class="es-cross__details">
-            <summary>
+          <div class="es-cross__details">
+            <input type="checkbox" id="es-cross-expand-toggle" />
+            <div id="es-cross-trigger" class="es-cross__trigger">
               <div class="es-cross__packshot es-hide">
                 <img src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/cross.png" alt="" class="es-cross__img" />
               </div>
-              <p class="es-cross__link es-cross__link--main es-hide">
+              <label for="es-cross-expand-toggle" class="es-cross__link es-cross__link--main es-hide">
                 Poznaj wszystkie produkty
-              </p>
-            </summary>
-            <div class="es-cross__content">
+              </label>
+            </div>
+            <div id="es-cross-mobile" class="es-cross__content es-cross__content--mobile">
               <p class="es-cross__subtitle">Sprawdź leki bez recepty</p>
               <div class="es-cross__products">
                 <div class="es-cross__product">
@@ -1123,7 +1170,7 @@
                 </div>
               </div>
             </div>
-          </details>
+          </div>
           <div class="es-cross__content es-cross__content--desktop">
             <p class="es-cross__subtitle">Sprawdź leki bez recepty</p>
             <div class="es-cross__products">
