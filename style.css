@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/Gilroy-Regular.ttf");
+  src: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/fonts/Gilroy-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/Gilroy-SemiBold.ttf");
+  src: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/fonts/Gilroy-SemiBold.ttf");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/Gilroy-Bold.ttf");
+  src: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/fonts/Gilroy-Bold.ttf");
   font-weight: 800;
   font-style: normal;
 }
@@ -116,7 +116,7 @@
 }
 #es-magne.es-magne .es-kv {
   padding: 20px 16px 16px 16px;
-  background: url(img/kv-dt.jpg) no-repeat center;
+  background: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/kv-dt.jpg") no-repeat center;
   background-size: cover;
   height: 112cqi;
   display: flex;
@@ -229,7 +229,7 @@
 #es-magne.es-magne .es-features {
   padding: 16px;
   padding-bottom: 53px;
-  background: url(img/bg-features.jpg) no-repeat center left;
+  background: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-features.jpg") no-repeat center left;
   background-size: cover;
 }
 #es-magne.es-magne .es-features__list {
@@ -319,7 +319,7 @@
 }
 @container (min-width: 768px) {
   #es-magne.es-magne .es-features {
-    background: url(img/bg-features.jpg) no-repeat center 0%;
+    background: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-features.jpg") no-repeat center 0%;
   }
   #es-magne.es-magne .es-features__item {
     width: calc(25% - 15px);
@@ -342,7 +342,7 @@
   padding-bottom: 90px;
   height: 66cqi;
   min-height: 380px;
-  background: url(img/bg-info.png) no-repeat center center;
+  background: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-info.png") no-repeat center center;
   background-size: cover;
   display: flex;
   flex-flow: column;
@@ -396,7 +396,7 @@
   margin-bottom: -7cqi;
   padding: 16px;
   min-height: 137cqi;
-  background: url(img/bg-hotspots.png) no-repeat center center;
+  background: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-hotspots.png") no-repeat center center;
   background-size: cover;
 }
 #es-magne.es-magne .es-hotspots__content {
@@ -455,7 +455,7 @@
 #es-magne.es-magne .es-benefits {
   padding: 16px;
   padding-top: calc(10cqi + 16px);
-  background: url(img/bg-benefits.jpg) no-repeat center center;
+  background: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-benefits.jpg") no-repeat center center;
   background-size: cover;
   background-position: top;
   margin-bottom: -6cqi;
@@ -631,12 +631,15 @@
 }
 #es-magne.es-magne .es-cross {
   padding: 40px 16px;
-  background: url(img/bg-cross-mb.png) repeat center center;
+  background: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-cross-mb.png") repeat center center;
   background-size: cover;
   background-position: top;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#es-magne.es-magne .es-cross__content--desktop {
+  display: none;
 }
 #es-magne.es-magne .es-cross__title {
   font-size: 32px;
@@ -670,6 +673,7 @@
   animation: es-pulse2 2s infinite;
 }
 #es-magne.es-magne .es-cross__link--main {
+  margin-top: 16px;
   width: 250px;
 }
 #es-magne.es-magne .es-cross__subtitle {
@@ -722,7 +726,13 @@
 @container (min-width: 768px) {
   #es-magne.es-magne .es-cross {
     height: 133cqi;
-    background: url(img/bg-cross.png) no-repeat center bottom;
+    background: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-ZiS-OLMED/master/img/bg-cross.png") no-repeat center bottom;
+  }
+  #es-magne.es-magne .es-cross__content--desktop {
+    display: block;
+  }
+  #es-magne.es-magne .es-cross__details {
+    display: none;
   }
   #es-magne.es-magne .es-cross__title {
     font-size: 40px;
